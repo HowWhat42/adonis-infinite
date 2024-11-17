@@ -1,0 +1,19 @@
+services:
+  database:
+    image: postgres:16-alpine3.19
+    ports:
+      - 5432:5432
+    volumes:
+      - psql-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=howwhat
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+  mailer:
+    image: axllent/mailpit:v1.16
+    ports:
+      - 1025:1025
+      - 8025:8025
+
+volumes:
+  psql-data:

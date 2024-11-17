@@ -1,0 +1,13 @@
+{
+  "name": "@iflab/rpc",
+  "private": true,
+  "type": "module",
+  "license": "UNLICENSED",
+  "exports": {
+    "./client": "./src/client.ts"
+  },
+  "dependencies": {
+    "@iflab/site": "workspace:*",
+    "@tuyau/client": "^0.1.3"
+  }
+}
