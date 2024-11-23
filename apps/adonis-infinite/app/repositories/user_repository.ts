@@ -1,5 +1,5 @@
-import { User } from '#dtos/user';
-import { UserIdentifier } from '#dtos/user_identifier';
+import { User } from '../domain/user.js';
+import { UserIdentifier } from '#domain/user_identifier';
 import { UserRole } from '#enums/user_role';
 import { db } from '#services/db';
 

@@ -1,5 +1,5 @@
-import { Entity } from '#dtos/entity';
-import type { UserIdentifier } from '#dtos/user_identifier';
+import { Entity } from './entity.js';
+import type { UserIdentifier } from './user_identifier.js';
 
 interface Properties {
 	id: UserIdentifier;

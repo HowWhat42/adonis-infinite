@@ -32,7 +32,7 @@
     "#start/*": "./start/*.js",
     "#config/*": "./config/*.js",
     "#types/*": "./types/*.js",
-    "#dtos/*": "./app/dtos/*.js",
+    "#domain/*": "./app/domain/*.js",
     "#enums/*": "./app/enums/*.js",
     "#repositories/*": "./app/repositories/*.js"
   },

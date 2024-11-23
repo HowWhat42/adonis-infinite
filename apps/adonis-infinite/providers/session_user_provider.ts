@@ -1,6 +1,6 @@
 import { symbols } from '@adonisjs/auth';
-import { User } from '#dtos/user';
-import { UserIdentifier } from '#dtos/user_identifier';
+import { User } from '../app/domain/user.js';
+import { UserIdentifier } from '../app/domain/user_identifier.js';
 import { UserRole } from '#enums/user_role';
 import { db } from '#services/db';
 import type { SessionGuardUser, SessionUserProviderContract } from '@adonisjs/auth/types/session';

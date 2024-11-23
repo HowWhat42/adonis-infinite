@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light Theme */
+  --layout-background: #F4F4F5;
+  --layout-elevation: #FFFFFF;
+  --layout-foreground: #09090B;
+  --layout-border: #E4E4E7;
+
+  --neutral-lowest: #FFFFFF;
+  --neutral-lower: #F4F4F5;
+  --neutral-low: #E4E4E7;
+  --neutral-medium: #A1A1AA;
+  --neutral-high: #52525B;
+  --neutral-higher: #3F3F46;
+  --neutral-highest: #09090B;
+
+  --brand-lowest: #ecfdf5;
+  --brand-lower: #d1fae5;
+  --brand-low: #6ee7b7;
+  --brand-medium: #10b981;
+  --brand-high: #047857;
+  --brand-higher: #064e3b;
+  --brand-highest: #022c22;
+
+  --success-lowest: #F0FDF4;
+  --success-lower: #DCFCE7;
+  --success-low: #86efac;
+  --success-medium: #22c55e;
+  --success-high: #15803d;
+  --success-higher: #14532d;
+  --success-highest: #052e16;
+
+  --warning-lowest: #fff7ed;
+  --warning-lower: #ffedd5;
+  --warning-low: #fdba74;
+  --warning-medium: #f97316;
+  --warning-high: #c2410c;
+  --warning-higher: #7c2d12;
+  --warning-highest: #431407;
+
+  --danger-lowest: #fef2f2;
+  --danger-lower: #fee2e2;
+  --danger-low: #fca5a5;
+  --danger-medium: #ef4444;
+  --danger-high: #b91c1c;
+  --danger-higher: #7f1d1d;
+  --danger-highest: #450a0a;
+
+  /* Font */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+.dark {
+  /* Dark Theme */
+  --layout-background: #09090b;
+  --layout-elevation: #27272a;
+  --layout-foreground: #FFFFFF;
+  --layout-border: #3f3f46;
+
+  --neutral-lowest: #09090b;
+  --neutral-lower: #27272a;
+  --neutral-low: #3f3f46;
+  --neutral-medium: #71717a;
+  --neutral-high: #d4d4d8;
+  --neutral-higher: #f4f4f5;
+  --neutral-highest: #FFFFFF;
+
+  --brand-lowest: #022c22;
+  --brand-lower: #065f46;
+  --brand-low: #059669;
+  --brand-medium: #34d399;
+  --brand-high: #6ee7b7;
+  --brand-higher: #d1fae5;
+  --brand-highest: #ecfdf5;
+
+  --success-lowest: #052e16;
+  --success-lower: #166534;
+  --success-low: #16a34a;
+  --success-medium: #4ade80;
+  --success-high: #86efac;
+  --success-higher: #dcfce7;
+  --success-highest: #f0fdf4;
+
+  --warning-lowest: #431407;
+  --warning-lower: #9a3412;
+  --warning-low: #ea580c;
+  --warning-medium: #fb923c;
+  --warning-high: #fdba74;
+  --warning-higher: #ffedd5;
+  --warning-highest: #fff7ed;
+
+  --danger-lowest: #450a0a;
+  --danger-lower: #991b1b;
+  --danger-low: #dc2626;
+  --danger-medium: #f87171;
+  --danger-high: #fca5a5;
+  --danger-higher: #fee2e2;
+  --danger-highest: #fef2f2;
+}

@@ -4,13 +4,14 @@
   "license": "UNLICENSED",
   "type": "module",
   "exports": {
-    "./unocss": "./src/unocss/unocss.config.ts"
-  },
-  "dependencies": {
-    "unocss": "^0.64.1"
+    "./tailwind": "./src/tailwind/config.ts"
   },
   "devDependencies": {
     "@swc/core": "1.7.26",
+    "tailwindcss": "^3.4.15",
     "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "tailwindcss-animate": "^1.0.7"
   }
 }

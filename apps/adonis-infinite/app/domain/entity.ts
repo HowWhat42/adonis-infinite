@@ -1,4 +1,4 @@
-import type { Identifier } from '#dtos/identifier';
+import type { Identifier } from './identifier.js';
 
 export abstract class Entity<TProperties extends { id: Identifier<any> }> {
 	readonly props: TProperties;
