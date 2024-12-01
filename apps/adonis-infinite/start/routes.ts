@@ -15,7 +15,9 @@ router.on('/').renderInertia('home')
 
 router
 	.group(() => {
+		router.get('signin', [AuthController, 'signin']).as('auth.signin');
 		router.post('login', [AuthController, 'login']).as('auth.login');
+		router.get('signup', [AuthController, 'signup']).as('auth.signup');
 	})
 	.middleware(middleware.guest());
 

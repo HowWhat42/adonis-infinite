@@ -5,12 +5,12 @@ import React from 'react'
 type CheckboxProps = {
   label?: React.ReactNode
   checked: boolean
-  setChecked: React.Dispatch<React.SetStateAction<ICheckbox.CheckedState>>
+  onCheckedChange: (e: ICheckbox.CheckedChangeDetails) => void
 }
 
-export const Checkbox = ({ label, checked, setChecked }: CheckboxProps) => {
+export const Checkbox = ({ label, checked, onCheckedChange }: CheckboxProps) => {
   return (
-    <CheckboxRoot checked={checked} onCheckedChange={(e) => setChecked(e.checked)}>
+    <CheckboxRoot checked={checked} onCheckedChange={onCheckedChange}>
       <CheckboxControl>
         <CheckboxIndicator>
           <CheckIcon />

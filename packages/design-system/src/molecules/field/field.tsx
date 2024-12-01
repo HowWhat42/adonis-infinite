@@ -28,30 +28,32 @@ const labelVariants = tv({
 
 type FieldProps = VariantProps<typeof field> & FieldRootProps & {
   value: string
-  setValue: (value: string) => void
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
   invalid?: boolean
   className?: string
   disabled?: boolean
-  size: 'small' | 'medium' | 'large'
+  size?: 'small' | 'medium' | 'large'
   type?: FieldInputProps['type'] | 'textarea'
   label?: string
   placeholder?: string
   errorMessage?: string
   helpMessage?: string
+  autoComplete?: string
 }
 
 export const Field = ({
   value,
-  setValue,
+  onChange,
   invalid,
   className,
   disabled,
-  size,
+  size = 'medium',
   type,
   label,
   placeholder,
   errorMessage,
   helpMessage,
+  autoComplete = 'off',
 }: FieldProps) => {
   const classes = clsx(
     className,
@@ -63,24 +65,25 @@ export const Field = ({
         {label}
       </FieldLabel>
 
-      {type === 'textarea' ? (
-        <FieldTextarea 
-          value={value} 
-          onChange={(e) => setValue(e.target.value)}
-          autoresize 
-          disabled={disabled} 
-          className={'px-4 py-2 border border-neutral-low rounded-lg text-neutral-highest bg-neutral-lowest focus:border-brand-medium focus:outline-none disabled:bg-neutral-lower disabled:text-neutral-medium'} placeholder={placeholder} 
-        />
-      ) : (
-        <FieldInput 
+        {/* <FieldInput 
           value={value}
-          onChange={(e) => setValue(e.target.value)}
+          onChange={onChange}
           disabled={disabled} 
           className={classes} 
           type={type} 
-          placeholder={placeholder} 
+          placeholder={placeholder}
+          autoComplete={autoComplete}
+        /> */}
+      
+      <FieldInput 
+          value={value}
+          onChange={onChange}
+          disabled={disabled} 
+          className={classes} 
+          type={type} 
+          placeholder={placeholder}
+          autoComplete={autoComplete}
         />
-      )}
 
       <FieldErrorText className='text-danger-medium text-sm'>
         {errorMessage}

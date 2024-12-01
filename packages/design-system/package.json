@@ -4,7 +4,13 @@
   "license": "UNLICENSED",
   "type": "module",
   "exports": {
-    "./css/globals.css": "./src/css/globals.css"
+    "./css/globals.css": "./src/css/globals.css",
+    "./avatar": "./src/atoms/avatar/avatar.tsx",
+    "./button": "./src/atoms/button/button.tsx",
+    "./checkbox": "./src/atoms/checkbox/checkbox.tsx",
+    "./dropdown": "./src/molecules/dropdown/dropdown.tsx",
+    "./dialog": "./src/molecules/dialog/dialog.tsx",
+    "./field": "./src/molecules/field/field.tsx"
   },
   "scripts": {
     "dev": "vite",

@@ -6,6 +6,10 @@ import type { HttpContext } from '@adonisjs/core/http';
 export default class AuthController {
   constructor(private authService: AuthService) {}
 
+	async signin({ inertia }: HttpContext) {
+		return inertia.render('auth/signin');
+	}
+
   async login({ auth, request, response, session }: HttpContext) {
 		const { email, password } = request.all();
 
@@ -21,6 +25,10 @@ export default class AuthController {
 		await auth.use('web').login(user);
 
 		return response.redirect().toPath('/');
+	}
+
+	async signup({ inertia }: HttpContext) {
+		return inertia.render('auth/signup');
 	}
 
 	async logout({ auth, response }: HttpContext) {
