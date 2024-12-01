@@ -1,5 +1,4 @@
 import type { Config } from 'tailwindcss';
-import defaultTheme from 'tailwindcss/defaultTheme';
 import animate from 'tailwindcss-animate';
 
 export const config: Config = {
@@ -7,7 +6,8 @@ export const config: Config = {
   content: [
     './node_modules/@iflab/design-system/src/**/*.{js,ts,jsx,tsx,mdx,stories.tsx,stories.ts}',
     './src/**/*.{js,ts,jsx,tsx,mdx,stories.tsx,stories.ts}',
-    './inertia/**/*.{ts,tsx}',
+    './inertia/**/*.{js,ts,jsx,tsx,mdx,stories.tsx,stories.ts}',
+    './resources/**/*.edge',
   ],
   theme: {
     extend: {
@@ -65,8 +65,8 @@ export const config: Config = {
           },
       },
       fontFamily: {
-        display: ['var(--font-display)', ...defaultTheme.fontFamily.sans],
-        body: ['var(--font-body)', ...defaultTheme.fontFamily.mono],
+        display: ['var(--font-display)'],
+        body: ['var(--font-body)'],
       },
       keyframes: {
         'accordion-down': {

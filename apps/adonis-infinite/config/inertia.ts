@@ -18,7 +18,7 @@ const inertiaConfig = defineConfig({
    * Options for the server-side rendering
    */
   ssr: {
-    enabled: true,
+    enabled: false,
     entrypoint: 'inertia/app/ssr.tsx'
   }
 })

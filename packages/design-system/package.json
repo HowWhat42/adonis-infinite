@@ -4,7 +4,7 @@
   "license": "UNLICENSED",
   "type": "module",
   "exports": {
-    "./css/globals": "./src/css/globals.css"
+    "./css/globals.css": "./src/css/globals.css"
   },
   "scripts": {
     "dev": "vite",
