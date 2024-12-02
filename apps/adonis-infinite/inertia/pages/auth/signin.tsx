@@ -1,11 +1,14 @@
 import { Field } from '@iflab/design-system/field'
 import { Button } from '@iflab/design-system/button'
 import { Checkbox } from '@iflab/design-system/checkbox'
-import { Link, useForm, usePage } from '@inertiajs/react'
+import { useForm, usePage } from '@inertiajs/react'
 import { client } from '@iflab/rpc/client'
 import Layout from './layout'
+import { useTranslation } from 'react-i18next'
+import { Link } from '@tuyau/inertia/react'
 
 const Signin = () => {
+  const { t } = useTranslation('auth');
   const loginUrl = client.$url('auth.login');
   const errors = usePage().props.errors;
 
@@ -24,10 +27,10 @@ const Signin = () => {
     <div className="mx-auto flex w-full flex-col justify-center space-y-6 max-w-[420px]">
       <header className="flex flex-col space-y-2 text-center">
         <h1 className="text-2xl font-semibold tracking-tight">
-          {("signin.title")}
+          {t("signin.title")}
         </h1>
         <p className="text-muted-foreground text-sm">
-          {("signin.description")}
+          {t("signin.description")}
         </p>
       </header>
       <main className="grid gap-6">
@@ -36,8 +39,8 @@ const Signin = () => {
             <span className="w-full border-t" />
           </div>
           <div className="relative flex justify-center text-xs uppercase">
-            <span className="bg-background text-muted-foreground px-2">
-              {("or_continue")}
+            <span className="bg-layout-elevation text-muted-foreground px-2">
+              {t("or_continue")}
             </span>
           </div>
         </div>
@@ -49,7 +52,7 @@ const Signin = () => {
           <Field
             placeholder={"name@example.com"}
             type="email"
-            label={("fields.email")}
+            label={t("fields.email")}
             autoCapitalize="none"
             autoComplete="email"
             autoCorrect="off"
@@ -58,9 +61,9 @@ const Signin = () => {
             errorMessage={form.errors.email}
           />
           <Field
-            placeholder="********"
+            placeholder="••••••••••••"
             type="password"
-            label={("fields.password")}
+            label={t("fields.password")}
             autoCapitalize="none"
             autoComplete="password"
             autoCorrect="off"
@@ -69,35 +72,31 @@ const Signin = () => {
             errorMessage={form.errors.password}
           />
           <Checkbox label={"Remember me"} checked={form.data.remember} onCheckedChange={(e) => form.setData('remember', e.checked as boolean)} />
-          <Button className="mt-3">{("signin.action")}</Button>
+          <Button className="mt-3">{t("signin.action")}</Button>
           <Link
-            href="/forgot-password"
+            route="auth.forgot_password"
             className="self-end text-right text-sm mt-2"
           >
-            {("forgot.link")}
+            {t("forgot.link")}
           </Link>
         </form>
       </main>
       <footer>
         <p className="text-muted-foreground -mb-10 mt-10 px-8 text-center text-sm">
-          {("agree")}{" "}
-          <Button>
+          {t("agree")}{" "}
             <Link
-              href="/terms"
+              route="terms"
               className="variant underline-offset-4 hover:underline"
             >
-              {("terms")}
-            </Link>
-          </Button>{" "}
-          {("and")}{" "}
-          <Button>
+              {t("terms")}
+            </Link>{" "}
+          {t("and")}{" "}
             <Link
-              href="/privacy"
+              route="privacy"
               className="variant underline-offset-4 hover:underline"
             >
-              {("privacy")}
+              {t("privacy")}
             </Link>
-          </Button>
           .
         </p>
       </footer>
@@ -105,6 +104,8 @@ const Signin = () => {
   )
 }
 
-Signin.layout = (page: React.ReactNode) => <Layout children={page} />
+Signin.layout = (page: React.ReactNode) => <Layout>
+  {page}
+</Layout>
 
 export default Signin

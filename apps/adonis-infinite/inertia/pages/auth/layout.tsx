@@ -1,26 +1,29 @@
-import { client } from '@iflab/rpc/client'
+// import { client } from '@iflab/rpc/client'
 import { Link } from '@tuyau/inertia/react'
+import { useTranslation } from 'react-i18next';
 
 const Layout = ({children}: {children: React.ReactNode}) => {
-  const pathname = client.$current()
+  // const pathname = client.$current()
+  const pathname = "auth.signin";
+  const { t } = useTranslation('auth');
+  
   return (
     <>
       <section className="container relative min-h-screen flex-col items-center justify-center grid lg:max-w-none lg:grid-cols-2 lg:px-0">
         <div className="flex justify-end gap-4 absolute right-1/2 lg:right-1/4 translate-x-1/2 top-4 md:top-8 max-w-[484px] w-[calc(50%+64px)]">
-          {pathname === "/signin" && (
+          {pathname === "auth.signin" && (
             <Link
               route="auth.signup"
             >
-              {("signup.title")}
+              {t("signup.title")}
             </Link>
           )}
           {(pathname === "auth.signup" ||
-            pathname === "auth.change-password" ||
             pathname === "auth.forgot-password") && (
             <Link
               route="auth.signin"
             >
-              {("signin.title")}
+              {t("signin.title")}
             </Link>
           )}
           {/* <LanguageSwitcher /> */}

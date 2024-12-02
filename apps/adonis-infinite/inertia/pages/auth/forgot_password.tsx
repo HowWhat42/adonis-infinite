@@ -1,33 +1,30 @@
-import { Link } from '@tuyau/inertia/react'
-import Layout from './layout'
-import { Field } from '@iflab/design-system/field'
 import { Button } from '@iflab/design-system/button'
+import { Field } from '@iflab/design-system/field'
+import { Link } from '@tuyau/inertia/react'
 import { useTranslation } from 'react-i18next'
+import Layout from './layout'
 import { useForm } from '@inertiajs/react'
-import { client } from '@iflab/rpc/client'
 
-const Signup = () => {
+const ForgotPassword = () => {
   const { t } = useTranslation('auth');
-  const registerUrl = client.$url('auth.login');
 
   const form = useForm({
-    email: '',
-    password: '',
+    email: ''
   })
 
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-		form.post(registerUrl);
+		// form.post(loginUrl);
 	}
 
   return (
     <div className="mx-auto flex w-full flex-col justify-center space-y-6 max-w-[420px]">
       <header className="flex flex-col space-y-2 text-center">
         <h1 className="text-2xl font-semibold tracking-tight">
-          {t("signup.title")}
+          {t("forgot.title")}
         </h1>
         <p className="text-muted-foreground text-sm">
-          {t("signup.description")}
+          {t("forgot.description")}
         </p>
       </header>
       <main className="grid gap-6">
@@ -35,15 +32,10 @@ const Signup = () => {
           <div className="absolute inset-0 flex items-center">
             <span className="w-full border-t" />
           </div>
-          <div className="relative flex justify-center text-xs uppercase">
-            <span className="bg-background text-muted-foreground px-2">
-              {t("or_continue")}
-            </span>
-          </div>
         </div>
         <form
-          method="post"
           onSubmit={onSubmit}
+          method="post"
           className="flex flex-col"
         >
           <Field
@@ -57,18 +49,7 @@ const Signup = () => {
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => form.setData('email', e.target.value)}
             errorMessage={form.errors.email}
           />
-          <Field
-            placeholder="••••••••••••"
-            type="password"
-            label={t("fields.password")}
-            autoCapitalize="none"
-            autoComplete="password"
-            autoCorrect="off"
-            value={form.data.password}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => form.setData('password', e.target.value)}
-            errorMessage={form.errors.password}
-          />
-          <Button className="mt-3">{t("signup.action")}</Button>
+          <Button className="mt-3">{t("forgot.confirm")}</Button>
         </form>
       </main>
       <footer>
@@ -88,8 +69,8 @@ const Signup = () => {
   )
 }
 
-Signup.layout = (page: React.ReactNode) => <Layout>
+ForgotPassword.layout = (page: React.ReactNode) => <Layout>
   {page}
 </Layout>
 
-export default Signup
+export default ForgotPassword

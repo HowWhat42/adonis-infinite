@@ -1,39 +1,51 @@
 import type { MakeTuyauRequest, MakeTuyauResponse } from '@tuyau/utils/types'
 import type { InferInput } from '@vinejs/vine/types'
 
-type SigninGetHead = {
+type AuthSigninGetHead = {
   request: unknown
   response: MakeTuyauResponse<import('../app/controllers/auth_controller.ts').default['signin']>
 }
-type LoginPost = {
+type AuthLoginPost = {
   request: unknown
   response: MakeTuyauResponse<import('../app/controllers/auth_controller.ts').default['login']>
 }
-type SignupGetHead = {
+type AuthSignupGetHead = {
   request: unknown
   response: MakeTuyauResponse<import('../app/controllers/auth_controller.ts').default['signup']>
+}
+type AuthForgotpasswordGetHead = {
+  request: unknown
+  response: MakeTuyauResponse<import('../app/controllers/auth_controller.ts').default['forgot_password']>
 }
 type LogoutDelete = {
   request: unknown
   response: MakeTuyauResponse<import('../app/controllers/auth_controller.ts').default['logout']>
 }
 export interface ApiDefinition {
-  'signin': {
-    '$url': {
+  'auth': {
+    'signin': {
+      '$url': {
+      };
+      '$get': AuthSigninGetHead;
+      '$head': AuthSigninGetHead;
     };
-    '$get': SigninGetHead;
-    '$head': SigninGetHead;
-  };
-  'login': {
-    '$url': {
+    'login': {
+      '$url': {
+      };
+      '$post': AuthLoginPost;
     };
-    '$post': LoginPost;
-  };
-  'signup': {
-    '$url': {
+    'signup': {
+      '$url': {
+      };
+      '$get': AuthSignupGetHead;
+      '$head': AuthSignupGetHead;
     };
-    '$get': SignupGetHead;
-    '$head': SignupGetHead;
+    'forgot_password': {
+      '$url': {
+      };
+      '$get': AuthForgotpasswordGetHead;
+      '$head': AuthForgotpasswordGetHead;
+    };
   };
   'logout': {
     '$url': {
@@ -45,23 +57,30 @@ const routes = [
   {
     params: [],
     name: 'auth.signin',
-    path: '/signin',
+    path: '/auth/signin',
     method: ["GET","HEAD"],
-    types: {} as SigninGetHead,
+    types: {} as AuthSigninGetHead,
   },
   {
     params: [],
     name: 'auth.login',
-    path: '/login',
+    path: '/auth/login',
     method: ["POST"],
-    types: {} as LoginPost,
+    types: {} as AuthLoginPost,
   },
   {
     params: [],
     name: 'auth.signup',
-    path: '/signup',
+    path: '/auth/signup',
     method: ["GET","HEAD"],
-    types: {} as SignupGetHead,
+    types: {} as AuthSignupGetHead,
+  },
+  {
+    params: [],
+    name: 'auth.forgot_password',
+    path: '/auth/forgot_password',
+    method: ["GET","HEAD"],
+    types: {} as AuthForgotpasswordGetHead,
   },
   {
     params: [],
@@ -69,6 +88,20 @@ const routes = [
     path: '/logout',
     method: ["DELETE"],
     types: {} as LogoutDelete,
+  },
+  {
+    params: [],
+    name: 'terms',
+    path: '/terms',
+    method: ["GET","HEAD"],
+    types: {} as unknown,
+  },
+  {
+    params: [],
+    name: 'privacy',
+    path: '/privacy',
+    method: ["GET","HEAD"],
+    types: {} as unknown,
   },
 ] as const;
 export const api = {
