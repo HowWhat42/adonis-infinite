@@ -21,9 +21,9 @@ const inertiaConfig = defineConfig({
     enabled: true,
     entrypoint: 'inertia/app/ssr.tsx',
     pages(_ctx, page) {
-			return page.includes('landing');
-		},
-  }
+      return page.includes('landing')
+    },
+  },
 })
 
 export default inertiaConfig

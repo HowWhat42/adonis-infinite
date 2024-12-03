@@ -1,9 +1,7 @@
 import React from 'react'
 
 const Terms = () => {
-  return (
-    <div>Terms</div>
-  )
+  return <div>Terms</div>
 }
 
 export default Terms

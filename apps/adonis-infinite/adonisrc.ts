@@ -10,7 +10,11 @@ export default defineConfig({
   | will be scanned automatically from the "./commands" directory.
   |
   */
-  commands: [() => import('@adonisjs/core/commands'), () => import('@tuyau/core/commands'), () => import('@adonisjs/cache/commands')],
+  commands: [
+    () => import('@adonisjs/core/commands'),
+    () => import('@tuyau/core/commands'),
+    () => import('@adonisjs/cache/commands'),
+  ],
 
   /*
   |--------------------------------------------------------------------------
@@ -39,7 +43,7 @@ export default defineConfig({
     () => import('@adonisjs/inertia/inertia_provider'),
     () => import('@tuyau/core/tuyau_provider'),
     () => import('@adonisjs/i18n/i18n_provider'),
-    () => import('@adonisjs/cache/cache_provider')
+    () => import('@adonisjs/cache/cache_provider'),
   ],
 
   /*
@@ -98,7 +102,7 @@ export default defineConfig({
     {
       pattern: 'resources/lang/**/*.{json,yaml,yml}',
       reloadServer: false,
-    }
+    },
   ],
 
   assetsBundler: false,

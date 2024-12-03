@@ -31,7 +31,7 @@ export const Base: Story = {
 	},
 	args: {
 		children: 'Click me',
-    color: 'primary',
+		color: 'primary',
 		size: 'medium',
 		ghost: false,
 		disabled: false,

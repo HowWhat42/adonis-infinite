@@ -5,13 +5,13 @@ export default function Home() {
     <>
       <Head title="Homepage" />
 
-      <div className="fixed xl:absolute left-8 right-8 top-0 bottom-0 xl:inset-0 max-w-screen-xl mx-auto before:content-[''] before:[background:repeating-linear-gradient(0deg,var(--sand-5)_0_4px,transparent_0_8px)] before:absolute before:top-0 before:left-0 before:h-full before:w-px after:content-[''] after:[background:repeating-linear-gradient(0deg,var(--sand-5)_0_4px,transparent_0_8px)] after:absolute after:top-0 after:right-0 after:h-full after:w-px"></div>
+      <div className="fixed inset-x-8 inset-y-0 mx-auto max-w-screen-xl before:absolute before:left-0 before:top-0 before:h-full before:w-px before:content-[''] before:[background:repeating-linear-gradient(0deg,var(--sand-5)_0_4px,transparent_0_8px)] after:absolute after:right-0 after:top-0 after:h-full after:w-px after:content-[''] after:[background:repeating-linear-gradient(0deg,var(--sand-5)_0_4px,transparent_0_8px)] xl:absolute xl:inset-0"></div>
 
-      <div className="pt-4 h-full flex flex-col">
+      <div className="flex h-full flex-col pt-4">
         {/* Header */}
-        <div className="grow pb-4 bg-gradient-to-b from-sand-1 to-sand-2 flex justify-center items-center">
+        <div className="from-sand-1 to-sand-2 flex grow items-center justify-center bg-gradient-to-b pb-4">
           <a href="https://adonisjs.com" target="_blank" className="isolate">
-            <svg className="w-16 h-16 fill-primary" viewBox="0 0 33 33">
+            <svg className="fill-primary size-16" viewBox="0 0 33 33">
               <path
                 fillRule="evenodd"
                 d="M0 16.333c0 13.173 3.16 16.333 16.333 16.333 13.173 0 16.333-3.16 16.333-16.333C32.666 3.16 29.506 0 16.333 0 3.16 0 0 3.16 0 16.333Zm6.586 3.393L11.71 8.083c.865-1.962 2.528-3.027 4.624-3.027 2.096 0 3.759 1.065 4.624 3.027l5.123 11.643c.233.566.432 1.297.432 1.93 0 2.893-2.029 4.923-4.923 4.923-.986 0-1.769-.252-2.561-.506-.812-.261-1.634-.526-2.695-.526-1.048 0-1.89.267-2.718.529-.801.253-1.59.503-2.538.503-2.894 0-4.923-2.03-4.923-4.924 0-.632.2-1.363.432-1.929Zm9.747-9.613-5.056 11.443c1.497-.699 3.227-1.032 5.056-1.032 1.763 0 3.56.333 4.99 1.032l-4.99-11.444Z"
@@ -22,8 +22,8 @@ export default function Home() {
         </div>
 
         {/* Bento with documentation, Adocasts, packages and Discord */}
-        <div className="isolate mt-10 max-w-screen-xl mx-auto px-16 xl:px-8 grid grid-cols-1 xl:grid-cols-2 xl:grid-rows-3 gap-8">
-          <article className="row-span-3 relative p-6 shadow-sm hover:shadow border border-sand-7 hover:border-sand-8 rounded-2xl transition ease-in-out duration-700 group flex flex-col gap-8">
+        <div className="isolate mx-auto mt-10 grid max-w-screen-xl grid-cols-1 gap-8 px-16 xl:grid-cols-2 xl:grid-rows-3 xl:px-8">
+          <article className="border-sand-7 hover:border-sand-8 group relative row-span-3 flex flex-col gap-8 rounded-2xl border p-6 shadow-sm transition duration-700 ease-in-out hover:shadow">
             <div className="relative opacity-80">
               <svg fill="none" viewBox="0 0 240 105">
                 <path fill="#F9F9F8" d="M0 4a4 4 0 0 1 4-4h232a4 4 0 0 1 4 4v101H0V4Z" />
@@ -61,12 +61,12 @@ export default function Home() {
                 </defs>
               </svg>
 
-              <div className="absolute left-0 right-0 bottom-0 h-16 bg-gradient-to-b from-white/0 to-white"></div>
+              <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-b from-white/0 to-white"></div>
             </div>
 
             <div className="flex flex-row gap-4">
-              <div className="shrink-0 w-10 h-10 bg-primary/20 rounded-md flex justify-center items-center">
-                <svg className="h-6 w-6 fill-primary" viewBox="0 0 256 256">
+              <div className="bg-primary/20 flex size-10 shrink-0 items-center justify-center rounded-md">
+                <svg className="fill-primary size-6" viewBox="0 0 256 256">
                   <path
                     fill="currentColor"
                     d="M208 24H72a32 32 0 0 0-32 32v168a8 8 0 0 0 8 8h144a8 8 0 0 0 0-16H56a16 16 0 0 1 16-16h136a8 8 0 0 0 8-8V32a8 8 0 0 0-8-8m-88 16h48v72l-19.21-14.4a8 8 0 0 0-9.6 0L120 112Zm80 144H72a31.8 31.8 0 0 0-16 4.29V56a16 16 0 0 1 16-16h32v88a8 8 0 0 0 12.8 6.4L144 114l27.21 20.4A8 8 0 0 0 176 136a8 8 0 0 0 8-8V40h16Z"
@@ -82,7 +82,7 @@ export default function Home() {
                   </a>
                 </h2>
 
-                <p className="text-sm text-sand-11 group-hover:text-sand-12 transition ease-in-out duration-700">
+                <p className="text-sand-11 group-hover:text-sand-12 text-sm transition duration-700 ease-in-out">
                   Dive into the official documentation to learn AdonisJS. Read carefully to discover
                   an unmatched set of features, best practices and developer experience. Through
                   examples, guides and API references, you'll find everything you need to build your
@@ -92,9 +92,9 @@ export default function Home() {
             </div>
           </article>
 
-          <article className="relative p-6 shadow-sm hover:shadow border border-sand-7 hover:border-sand-8 rounded-2xl transition ease-in-out duration-700 group flex flex-row gap-4">
-            <div className="shrink-0 w-10 h-10 bg-primary/20 rounded-md flex justify-center items-center">
-              <svg className="h-6 w-6 fill-primary" viewBox="0 0 256 256">
+          <article className="border-sand-7 hover:border-sand-8 group relative flex flex-row gap-4 rounded-2xl border p-6 shadow-sm transition duration-700 ease-in-out hover:shadow">
+            <div className="bg-primary/20 flex size-10 shrink-0 items-center justify-center rounded-md">
+              <svg className="fill-primary size-6" viewBox="0 0 256 256">
                 <path
                   fill="currentColor"
                   d="m164.44 105.34-48-32A8 8 0 0 0 104 80v64a8 8 0 0 0 12.44 6.66l48-32a8 8 0 0 0 0-13.32M120 129.05V95l25.58 17ZM216 40H40a16 16 0 0 0-16 16v112a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V56a16 16 0 0 0-16-16m0 128H40V56h176zm16 40a8 8 0 0 1-8 8H32a8 8 0 0 1 0-16h192a8 8 0 0 1 8 8"
@@ -110,16 +110,16 @@ export default function Home() {
                 </a>
               </h2>
 
-              <p className="text-sm text-sand-11 group-hover:text-sand-12 transition ease-in-out duration-700">
+              <p className="text-sand-11 group-hover:text-sand-12 text-sm transition duration-700 ease-in-out">
                 Level up your development and Adonis skills with hours of video content, from
                 beginner to advanced, through databases, testing, and more.
               </p>
             </div>
           </article>
 
-          <article className="relative p-6 shadow-sm hover:shadow border border-sand-7 hover:border-sand-8 rounded-2xl transition ease-in-out duration-700 group flex flex-row gap-4">
-            <div className="shrink-0 w-10 h-10 bg-primary/20 rounded-md flex justify-center items-center">
-              <svg className="h-6 w-6 fill-primary" viewBox="0 0 256 256">
+          <article className="border-sand-7 hover:border-sand-8 group relative flex flex-row gap-4 rounded-2xl border p-6 shadow-sm transition duration-700 ease-in-out hover:shadow">
+            <div className="bg-primary/20 flex size-10 shrink-0 items-center justify-center rounded-md">
+              <svg className="fill-primary size-6" viewBox="0 0 256 256">
                 <path
                   fill="currentColor"
                   d="M208 96a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16h-32a16 16 0 0 0-16 16v8H96v-8a16 16 0 0 0-16-16H48a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h8v64h-8a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h32a16 16 0 0 0 16-16v-8h64v8a16 16 0 0 0 16 16h32a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16h-8V96Zm-32-48h32v32h-32ZM48 48h32v15.9a.5.5 0 0 0 0 .2V80H48Zm32 160H48v-32h32v15.9a.5.5 0 0 0 0 .2zm128 0h-32v-32h32Zm-24-48h-8a16 16 0 0 0-16 16v8H96v-8a16 16 0 0 0-16-16h-8V96h8a16 16 0 0 0 16-16v-8h64v8a16 16 0 0 0 16 16h8Z"
@@ -135,16 +135,16 @@ export default function Home() {
                 </a>
               </h2>
 
-              <p className="text-sm text-sand-11 group-hover:text-sand-12 transition ease-in-out duration-700">
+              <p className="text-sand-11 group-hover:text-sand-12 text-sm transition duration-700 ease-in-out">
                 Supercharge your AdonisJS application with packages built and maintained by both the
                 core team and the community.
               </p>
             </div>
           </article>
 
-          <article className="relative p-6 shadow-sm hover:shadow border border-sand-7 hover:border-sand-8 rounded-2xl transition ease-in-out duration-700 group flex flex-row gap-4">
-            <div className="shrink-0 w-10 h-10 bg-primary/20 rounded-md flex justify-center items-center">
-              <svg className="h-6 w-6 fill-primary" viewBox="0 0 256 256">
+          <article className="border-sand-7 hover:border-sand-8 group relative flex flex-row gap-4 rounded-2xl border p-6 shadow-sm transition duration-700 ease-in-out hover:shadow">
+            <div className="bg-primary/20 flex size-10 shrink-0 items-center justify-center rounded-md">
+              <svg className="fill-primary size-6" viewBox="0 0 256 256">
                 <path
                   fill="currentColor"
                   d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24m0 192a88 88 0 1 1 88-88 88.1 88.1 0 0 1-88 88m44.42-143.16-64 32a8.05 8.05 0 0 0-3.58 3.58l-32 64A8 8 0 0 0 80 184a8.1 8.1 0 0 0 3.58-.84l64-32a8.05 8.05 0 0 0 3.58-3.58l32-64a8 8 0 0 0-10.74-10.74M138 138l-40.11 20.11L118 118l40.15-20.07Z"
@@ -160,7 +160,7 @@ export default function Home() {
                 </a>
               </h2>
 
-              <p className="text-sm text-sand-11 group-hover:text-sand-12 transition ease-in-out duration-700">
+              <p className="text-sand-11 group-hover:text-sand-12 text-sm transition duration-700 ease-in-out">
                 Never get lost again, ask questions, and share your knowledge or projects with a
                 growing and supportive community. Join us.
               </p>
@@ -169,17 +169,17 @@ export default function Home() {
         </div>
 
         {/* Features */}
-        <div className="grow mt-10 mb-8 px-16 xl:px-8 max-w-screen-xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
-            <article className="relative py-4 px-5 bg-white border border-transparent rounded-lg hover:border-sand-8 hover:shadow-sm transition duration-100 ease-in-out group">
-              <h2 className="font-semibold text-sand-12">
+        <div className="mx-auto mb-8 mt-10 max-w-screen-xl grow px-16 xl:px-8">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            <article className="hover:border-sand-8 group relative rounded-lg border border-transparent bg-white px-5 py-4 transition duration-100 ease-in-out hover:shadow-sm">
+              <h2 className="text-sand-12 font-semibold">
                 <a
                   href="https://lucid.adonisjs.com"
                   target="_blank"
                   className="flex flex-row gap-2"
                 >
-                  <span className="bg-[#D5EAE7] h-6 w-6 flex justify-center items-center rounded">
-                    <svg className="h-4 w-4 fill-[#0E766E]" viewBox="0 0 24 24">
+                  <span className="flex size-6 items-center justify-center rounded bg-[#D5EAE7]">
+                    <svg className="size-4 fill-[#0E766E]" viewBox="0 0 24 24">
                       <g
                         fill="none"
                         stroke="currentColor"
@@ -198,13 +198,13 @@ export default function Home() {
                 </a>
               </h2>
 
-              <p className="mt-4 text-sm text-sand-11 group-hover:text-sand-12 transition ease-in-out duration-100">
+              <p className="text-sand-11 group-hover:text-sand-12 mt-4 text-sm transition duration-100 ease-in-out">
                 A SQL ORM with a powerful query builder, active record, migrations, and model
                 factories. Everything you need to work with databases.
               </p>
 
               <svg
-                className="absolute top-4 right-5 opacity-0 group-hover:opacity-100 text-sand-9 w-4 h-4 transition ease-in-out duration-100"
+                className="text-sand-9 absolute right-5 top-4 size-4 opacity-0 transition duration-100 ease-in-out group-hover:opacity-100"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -218,11 +218,11 @@ export default function Home() {
               </svg>
             </article>
 
-            <article className="relative py-4 px-5 bg-white border border-transparent rounded-lg hover:border-sand-8 hover:shadow-sm transition duration-100 ease-in-out group">
-              <h2 className="font-semibold text-sand-12">
+            <article className="hover:border-sand-8 group relative rounded-lg border border-transparent bg-white px-5 py-4 transition duration-100 ease-in-out hover:shadow-sm">
+              <h2 className="text-sand-12 font-semibold">
                 <a href="https://vinejs.dev/" target="_blank" className="flex flex-row gap-2">
-                  <span className="bg-[#F3DBFC] h-6 w-6 flex justify-center items-center rounded">
-                    <svg className="h-4 w-4 fill-[#CA5AF2]" viewBox="0 0 24 24">
+                  <span className="flex size-6 items-center justify-center rounded bg-[#F3DBFC]">
+                    <svg className="size-4 fill-[#CA5AF2]" viewBox="0 0 24 24">
                       <path
                         fill="none"
                         stroke="currentColor"
@@ -238,13 +238,13 @@ export default function Home() {
                 </a>
               </h2>
 
-              <p className="mt-4 text-sm text-sand-11 group-hover:text-sand-12 transition ease-in-out duration-100">
+              <p className="text-sand-11 group-hover:text-sand-12 mt-4 text-sm transition duration-100 ease-in-out">
                 A yet simple but feature rich and type-safe form data validation. It comes with 50+
                 built-in rules and an expressive API to define custom rules.
               </p>
 
               <svg
-                className="absolute top-4 right-5 opacity-0 group-hover:opacity-100 text-sand-9 w-4 h-4 transition ease-in-out duration-100"
+                className="text-sand-9 absolute right-5 top-4 size-4 opacity-0 transition duration-100 ease-in-out group-hover:opacity-100"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -258,11 +258,11 @@ export default function Home() {
               </svg>
             </article>
 
-            <article className="relative py-4 px-5 bg-white border border-transparent rounded-lg hover:border-sand-8 hover:shadow-sm transition duration-100 ease-in-out group">
-              <h2 className="font-semibold text-sand-12">
+            <article className="hover:border-sand-8 group relative rounded-lg border border-transparent bg-white px-5 py-4 transition duration-100 ease-in-out hover:shadow-sm">
+              <h2 className="text-sand-12 font-semibold">
                 <a href="https://inertiajs.com/" target="_blank" className="flex flex-row gap-2">
-                  <span className="bg-[#B8EAE0] h-6 w-6 flex justify-center items-center rounded">
-                    <svg className="h-4 w-4 fill-[#4BBBA5]" viewBox="0 0 24 24">
+                  <span className="flex size-6 items-center justify-center rounded bg-[#B8EAE0]">
+                    <svg className="size-4 fill-[#4BBBA5]" viewBox="0 0 24 24">
                       <path
                         fill="none"
                         stroke="currentColor"
@@ -278,13 +278,13 @@ export default function Home() {
                 </a>
               </h2>
 
-              <p className="mt-4 text-sm text-sand-11 group-hover:text-sand-12 transition ease-in-out duration-100">
+              <p className="text-sand-11 group-hover:text-sand-12 mt-4 text-sm transition duration-100 ease-in-out">
                 The modern monolithic application architecture. It allows you to build single-page
                 applications without building an API.
               </p>
 
               <svg
-                className="absolute top-4 right-5 opacity-0 group-hover:opacity-100 text-sand-9 w-4 h-4 transition ease-in-out duration-100"
+                className="text-sand-9 absolute right-5 top-4 size-4 opacity-0 transition duration-100 ease-in-out group-hover:opacity-100"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -298,11 +298,11 @@ export default function Home() {
               </svg>
             </article>
 
-            <article className="relative py-4 px-5 bg-white border border-transparent rounded-lg hover:border-sand-8 hover:shadow-sm transition duration-100 ease-in-out group">
-              <h2 className="font-semibold text-sand-12">
+            <article className="hover:border-sand-8 group relative rounded-lg border border-transparent bg-white px-5 py-4 transition duration-100 ease-in-out hover:shadow-sm">
+              <h2 className="text-sand-12 font-semibold">
                 <a href="https://japa.dev" target="_blank" className="flex flex-row gap-2">
-                  <span className="bg-[#FACDDC] h-6 w-6 flex justify-center items-center rounded">
-                    <svg className="h-4 w-4 fill-[#DD3074]" viewBox="0 0 256 256">
+                  <span className="flex size-6 items-center justify-center rounded bg-[#FACDDC]">
+                    <svg className="size-4 fill-[#DD3074]" viewBox="0 0 256 256">
                       <path
                         fill="currentColor"
                         d="m240.49 83.51-60-60a12 12 0 0 0-17 0L34.28 152.75a48.77 48.77 0 0 0 69 69l111.2-111.26 21.31-7.11a12 12 0 0 0 4.7-19.87M86.28 204.75a24.77 24.77 0 0 1-35-35l28.13-28.13c7.73-2.41 19.58-3 35.06 5a84 84 0 0 0 21.95 8ZM204.2 88.62a12.15 12.15 0 0 0-4.69 2.89l-38.89 38.9c-7.73 2.41-19.58 3-35.06-5a84 84 0 0 0-21.94-8L172 49l37.79 37.79Z"
@@ -314,13 +314,13 @@ export default function Home() {
                 </a>
               </h2>
 
-              <p className="mt-4 text-sm text-sand-11 group-hover:text-sand-12 transition ease-in-out duration-100">
+              <p className="text-sand-11 group-hover:text-sand-12 mt-4 text-sm transition duration-100 ease-in-out">
                 From JSON API tests using Open API schema to browser tests with Playwrighht, it
                 comes with everything you need to test your application.
               </p>
 
               <svg
-                className="absolute top-4 right-5 opacity-0 group-hover:opacity-100 text-sand-9 w-4 h-4 transition ease-in-out duration-100"
+                className="text-sand-9 absolute right-5 top-4 size-4 opacity-0 transition duration-100 ease-in-out group-hover:opacity-100"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -336,7 +336,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="text-sm text-center [&>code]:font-medium [&>code]:text-[#a599ff] bg-sand-12 text-sand-1 fixed bottom-0 left-0 right-0 py-2">
+        <div className="bg-sand-12 text-sand-1 fixed inset-x-0 bottom-0 py-2 text-center text-sm [&>code]:font-medium [&>code]:text-[#a599ff]">
           Route for this page is registered in <code>start/routes.ts</code> file, rendering{' '}
           <code>inertia/pages/home.tsx</code> template
         </div>

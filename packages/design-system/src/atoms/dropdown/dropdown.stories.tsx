@@ -1,10 +1,10 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { Dropdown } from "./dropdown";
-import { Button } from "../button/button";
+import { Meta, StoryObj } from '@storybook/react';
+import { Dropdown } from './dropdown';
+import { Button } from '../button/button';
 
 const meta = {
-  component: Dropdown,
-  title: 'Atoms/Dropdown',
+	component: Dropdown,
+	title: 'Atoms/Dropdown',
 } satisfies Meta<typeof Dropdown>;
 
 export default meta;
@@ -12,13 +12,13 @@ export default meta;
 type Story = StoryObj<typeof Dropdown>;
 
 export const Base: Story = {
-  render: (args) => {
-    return (
-      <Dropdown {...args}>
+	render: (args) => {
+		return (
+			<Dropdown {...args}>
 				<Button>Click me</Button>
 			</Dropdown>
-    )
-  },
+		);
+	},
 	args: {
 		actions: [
 			{

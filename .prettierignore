@@ -1,0 +1,14 @@
+# DO ignore JSON-with-comments files
+tsconfig.json
+
+# Usual stuff to ignore
+node_modules/*
+dist/*
+coverage/*
+generated/
+**/*/public/*
+**/.adonisjs/*
+
+**/*.js
+**/*.jsx
+pnpm-lock.yaml

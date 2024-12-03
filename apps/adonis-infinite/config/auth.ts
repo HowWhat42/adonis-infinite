@@ -1,7 +1,7 @@
 import { defineConfig } from '@adonisjs/auth'
 import { sessionGuard } from '@adonisjs/auth/session'
 import type { InferAuthEvents, Authenticators } from '@adonisjs/auth/types'
-import { configProvider } from '@adonisjs/core';
+import { configProvider } from '@adonisjs/core'
 
 const authConfig = defineConfig({
   default: 'web',
@@ -9,9 +9,9 @@ const authConfig = defineConfig({
     web: sessionGuard({
       useRememberMeTokens: false,
       provider: configProvider.create(async () => {
-				const { SessionKyselyUserProvider } = await import('#providers/session_user_provider');
-				return new SessionKyselyUserProvider();
-			}),
+        const { SessionKyselyUserProvider } = await import('#providers/session_user_provider')
+        return new SessionKyselyUserProvider()
+      }),
     }),
   },
 })

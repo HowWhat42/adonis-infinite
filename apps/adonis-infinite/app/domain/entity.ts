@@ -1,21 +1,21 @@
-import type { Identifier } from './identifier.js';
+import type { Identifier } from './identifier.js'
 
 export abstract class Entity<TProperties extends { id: Identifier<any> }> {
-	readonly props: TProperties;
+  readonly props: TProperties
 
-	protected constructor(props: TProperties) {
-		this.props = props;
-	}
+  protected constructor(props: TProperties) {
+    this.props = props
+  }
 
-	getIdentifier() {
-		return this.props.id;
-	}
+  getIdentifier() {
+    return this.props.id
+  }
 
-	equals(object: Entity<TProperties>) {
-		if (this === object) {
-			return true;
-		}
+  equals(object: Entity<TProperties>) {
+    if (this === object) {
+      return true
+    }
 
-		return this.getIdentifier().equals(object.getIdentifier()) || false;
-	}
+    return this.getIdentifier().equals(object.getIdentifier()) || false
+  }
 }

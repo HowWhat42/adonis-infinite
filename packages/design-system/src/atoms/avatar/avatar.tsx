@@ -1,13 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 type AvatarProps = {
-  src: string
-}
+	src: string;
+};
 
-export const Avatar = ({
-  src,
-}: AvatarProps) => {
-  return (
-    <img src={src} alt='avatar' className='w-24 h-24 object-cover rounded-full' />
-  )
-}
+export const Avatar = ({ src }: AvatarProps) => {
+	return <img src={src} alt="avatar" className="size-24 rounded-full object-cover" />;
+};

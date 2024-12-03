@@ -9,12 +9,12 @@ const preview: Preview = {
 	},
 	decorators: [
 		withThemeByClassName({
-      themes: {
-        light: 'light',
-        dark: 'dark',
-      },
-      defaultTheme: 'light',
-    }),
+			themes: {
+				light: 'light',
+				dark: 'dark',
+			},
+			defaultTheme: 'light',
+		}),
 	],
 };
 
